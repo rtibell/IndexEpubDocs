@@ -1,0 +1,2 @@
+#!/bin/bash
+zip -rq epub-index-upload.zip LambdaUploadTrigger.py ReadEpub.py boto3 boto3-1.4.4.dist-info botocore botocore-1.5.70.dist-info concurrent dateutil docutils docutils-0.13.1.dist-info ebooklib EbookLib-0.16.egg-info futures-3.1.1.dist-info jmespath jmespath-0.9.3.dist-info python_dateutil-2.6.0.dist-info s3transfer s3transfer-0.1.10.dist-info six-1.10.0.dist-info six.py six.pyc lxml lxml-3.6.0-py2.7.egg-info

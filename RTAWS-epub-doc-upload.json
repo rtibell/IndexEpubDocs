@@ -1,0 +1,14 @@
+{
+    "CodeSha256": "AK+WEnXoFn+nLRw8O/ujCUqQWOX3ffdQocm5wsng5oo=", 
+    "FunctionName": "RTAWS-epub-doc-upload", 
+    "CodeSize": 9068836, 
+    "MemorySize": 512, 
+    "FunctionArn": "arn:aws:lambda:eu-central-1:187928521526:function:RTAWS-epub-doc-upload", 
+    "Version": "18", 
+    "Role": "arn:aws:iam::187928521526:role/service-role/lambdaRole", 
+    "Timeout": 30, 
+    "LastModified": "2017-06-19T15:32:01.374+0000", 
+    "Handler": "LambdaUploadTrigger.lambda_handler", 
+    "Runtime": "python2.7", 
+    "Description": "Uppload Epub trigger. Starting trigger."
+}

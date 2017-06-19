@@ -1,0 +1,10 @@
+{
+    "CloudFunctionConfiguration": {
+        "CloudFunction": "arn:aws:lambda:eu-central-1:187928521526:function:RTAWS-epub-doc-upload:5", 
+        "Events": [
+            "s3:ObjectCreated:*"
+        ], 
+        "Id": "415be085-57d8-460f-824d-13bc30dd04cb", 
+        "Event": "s3:ObjectCreated:*"
+    }
+}

@@ -1,0 +1,29 @@
+
+{
+    "Bucket": "ratts-epub-docs", 
+    "NotificationConfiguration": {
+    "LambdaFunctionConfigurations": [
+        {
+            "Filter": {
+                "Key": {
+                    "FilterRules": [
+                        {
+                            "Name": "Prefix", 
+                            "Value": ""
+                        }, 
+                        {
+                            "Name": "Suffix", 
+                            "Value": ""
+                        }
+                    ]
+                }
+            }, 
+            "LambdaFunctionArn": "__REPLACE-LAMBDA__", 
+            "Id": "415be085-57d8-460f-824d-13bc30dd04cb", 
+            "Events": [
+                "s3:ObjectCreated:*"
+            ]
+        }
+    ]
+    }
+}

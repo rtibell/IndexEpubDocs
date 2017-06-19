@@ -4,7 +4,6 @@ import boto3
 client = boto3.client('s3')
 book_file = r'OAuth_2_in_Action.epub'
 
-
 #text/css
 #text/html
 #image/jpeg
@@ -15,14 +14,15 @@ def read_book(file):
 	for items in book.get_items():
 		if items.get_type() == 1:
 			print("Image {}".format(items.get_name()))
-			put_bucket('html', 'image/jpeg', items.get_name(), items.get_content())
+			put_bucket(file, 'image/jpeg', items.get_name(), items.get_content())
 		if items.get_type() == 2:
 			print("Style {}".format(items.get_name()))
-			put_bucket('html', 'text/css', items.get_name(), items.get_content())
+			put_bucket(file, 'text/css', items.get_name(), items.get_content())
 		if items.get_type() == 3:
 			print("Type={} {}".format(items.get_type(),items.get_name()))
 		if items.get_type() == 4:
-			print("Type={} {}".format(items.get_type(),items.get_name()))
+			print("TOC {}".format(items.get_name()))
+			put_bucket(file, 'text/ncx', items.get_name(), items.get_content())
 		if items.get_type() == 5:
 			print("Type={} {}".format(items.get_type(),items.get_name()))
 		if items.get_type() == 6:
@@ -33,7 +33,7 @@ def read_book(file):
 			print("Type={} {}".format(items.get_type(),items.get_name()))
 		if items.get_type() == 9:
 			print("HTML {}".format(items.get_name()))
-			put_bucket('html', 'text/html', items.get_name(), items.get_content())
+			put_bucket(file, 'text/html', items.get_name(), items.get_content())
 
 def put_bucket(dir, cont_type, name, body):
 	dir_name = "{}/{}".format(dir,name)
